@@ -1,7 +1,6 @@
 # %%
 import pandas as pd
 import numpy as np
-import xgboost
 
 from dataprep.eda import plot
 from dataprep.eda import plot_correlation
@@ -13,9 +12,15 @@ import seaborn as sns
 sns.set(style="whitegrid", color_codes=True)
 sns.set(font_scale=1)
 
-# %%  RUN EDA
+# %%
+# Minimal Processing
 wines = pd.read_csv("winemag-data-130k-v2.csv")
-# %%  #Overall Distribution
+wines.columns
+wines.drop(columns='Unnamed: 0', inplace=True)
+wines.dropna(axis='index', subset=['price'], inplace=True)
+wines.drop_duplicates(inplace=True)
+# %%
+# Overall Distribution
 plot(wines)
 # %%  # Price Dist -> Clean
 plot(wines, "price")
@@ -31,6 +36,10 @@ plot_correlation(wines, "price", "points")
 # %%
 plot_missing(wines)
 # %%
-plot_missing(wines, "price", "points")  # <-cool
+plot_missing(wines, "price", "points")
 
 # %%
+plot_correlation(wines, "price")
+# %%
+# END EDA
+# %
