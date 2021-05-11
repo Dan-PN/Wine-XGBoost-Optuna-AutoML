@@ -1,12 +1,11 @@
-import pandas as pd
-import numpy as np
 import collections
-from dataprep.eda import plot
-from dataprep.eda import plot_correlation
-from dataprep.eda import plot_missing
 
 import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
 import seaborn as sns
+from dataprep.eda import plot, plot_correlation, plot_missing
+
 sns.set(style="whitegrid", color_codes=True)
 sns.set(font_scale=1)
 
@@ -20,11 +19,14 @@ wines.dropna(axis='index', subset=['price', ], inplace=True)
 wines.drop_duplicates(inplace=True)
 # extract year from title
 wines['year'] = wines.title.str.extract(pat='(\d{4})', expand=False)
+wines.astype({'year': 'int32'}, copy=False, errors='ignore')
 
+# # Encode Categorical Data as One Hot
+# categorycal_encoded = pd.get_dummies(
+#     data=wines[['country', 'province', 'variety']], prefix='c', dummy_na=False)  # keeping NaNs
 
-# Encode Categorical Data as One Hot
 categorycal_encoded = pd.get_dummies(
-    data=wines[['country', 'province', 'variety']], prefix='c', dummy_na=False)  # keeping NaNs
+    data=wines[['country']], prefix='c', dummy_na=False)  # keeping NaNs
 
 
 # Extract most frequent wine related words from description and encode - .
@@ -52,7 +54,7 @@ filtered_words = list(filter(filter_common_words, word_list))
 
 # Extract top most common words without stop words
 word_counter = collections.Counter(filtered_words)
-word_counter_top = word_counter.most_common(400)  #
+word_counter_top = word_counter.most_common(200)  #
 
 # Create Hot One Encoding for Frequent words in Description
 descriptions = pd.Series([desc for desc, freq in word_counter_top])
@@ -76,6 +78,6 @@ wines = pd.concat([wines, descriptions_df], axis=1, join="inner")
 wines = pd.concat([wines, categorycal_encoded], axis=1, join="inner")
 
 # Save
-wines.to_csv("wines_encoded.csv", encoding='utf-8')
+wines.to_csv("wines_encoded.csv", encoding='utf-8', index=False)
 
 # fff
