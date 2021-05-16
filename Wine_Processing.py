@@ -16,6 +16,7 @@ wines.columns
 wines.drop(columns=['Unnamed: 0', 'taster_twitter_handle',
                     'taster_name'], inplace=True)
 wines.dropna(axis='index', subset=['price', ], inplace=True)
+
 wines.drop_duplicates(inplace=True)
 # extract year from title
 wines['year'] = wines.title.str.extract(pat='(\d{4})', expand=False)
@@ -24,9 +25,6 @@ wines.astype({'year': 'int32'}, copy=False, errors='ignore')
 # Encode Categorical Data as One Hot
 categorycal_encoded = pd.get_dummies(
     data=wines[['country', 'province', 'variety']], prefix='c', dummy_na=False)  # keeping NaNs
-
-# categorycal_encoded = pd.get_dummies(
-#     data=wines[['country']], prefix='c', dummy_na=False)  # keeping NaNs
 
 
 # Extract most frequent wine related words from description and encode - .
