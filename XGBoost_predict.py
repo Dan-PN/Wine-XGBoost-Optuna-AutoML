@@ -1,14 +1,14 @@
 # %%#
-import plotly
 import collections
 import numpy as np
-import pandas as pd
-import xgboost as xgb
-from sklearn.model_selection import RepeatedKFold, cross_val_score
-from matplotlib import pyplot as plt
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
 import optuna
+import pandas as pd
+import plotly
+import xgboost as xgb
+from matplotlib import pyplot as plt
+from sklearn.metrics import accuracy_score
+from sklearn.model_selection import (RepeatedKFold, cross_val_score,
+                                     train_test_split)
 
 # Load Data
 wines = pd.read_csv("wines_encoded.csv", encoding='utf-8')
