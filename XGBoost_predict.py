@@ -54,7 +54,7 @@ def objective(trial, dtrain, dtest):
              'max_depth': trial.suggest_int('max_depth', 2, 20),
              "lambda": trial.suggest_loguniform("lambda", 1e-8, 3.0),
              "alpha": trial.suggest_loguniform("alpha", 1e-8, 1.0),
-             'colsample_bytree': trial.suggest_discrete_uniform('colsample_bytree', 0.6, 1, 0.05)
+             'colsample_bytree': trial.suggest_discrete_uniform('colsample_bytree', 0.5, 1, 0.05)
              }
     # Pruning Callback to stop training
     pruning_callback = optuna.integration.XGBoostPruningCallback(
@@ -68,7 +68,7 @@ def objective(trial, dtrain, dtest):
 
 
 study = optuna.create_study(direction="minimize")
-study.optimize(lambda trial: objective(trial, dtrain, dtest), n_trials=100)
+study.optimize(lambda trial: objective(trial, dtrain, dtest), n_trials=50)
 
 print("Number of finished trials: {}".format(len(study.trials)))
 print("Best trial:")
@@ -90,7 +90,7 @@ optuna.visualization.plot_optimization_history(study)
 
 
 # %%
-
+# Train Model with Tuned Parameters
 param_basic = {'booster': 'gbtree',
                "verbosity": 1,
                'nthread': 6,
@@ -105,10 +105,10 @@ eval_record = {}
 f_model = xgb.train(opt_param, dtrain, evals=[
     (dtest, "validation")], evals_result=eval_record)  # num_boost_round=15, early_stopping_rounds=5
 
-# --> Do feature importance graphs
 
 # %%
 xgb.plot_importance(f_model, importance_type="weight", max_num_features=20)
-
-
 # %%
+xgb.plot_importance(f_model, importance_type="gain", max_num_features=20)
+# %%
+xgb.plot_importance(f_model, importance_type="cover", max_num_features=20)
