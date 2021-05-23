@@ -1,0 +1,16 @@
+if (price <= 30.5) and (price > 15.5) and (price > 20.5) then response: 88.236 | based on 16,823 samples
+
+if (price <= 30.5) and (price > 15.5) and (price <= 20.5) then response: 87.302 | based on 13,156 samples
+
+if (price > 30.5) and (price <= 53.5) and (price <= 40.5) then response: 89.241 | based on 10,122 samples
+
+if (price > 30.5) and (price > 53.5) and (price <= 84.5) then response: 90.963 | based on 7,983 samples
+
+if (price <= 30.5) and (price <= 15.5) and (price > 12.5) then response: 86.381 | based on 7,933 samples
+
+if (price <= 30.5) and (price <= 15.5) and (price <= 12.5) then response: 85.289 | based on 7,707 samples
+
+if (price > 30.5) and (price <= 53.5) and (price > 40.5) then response: 90.171 | based on 7,641 samples
+
+if (price > 30.5) and (price > 53.5) and (price > 84.5) then response: 92.408 | based on 3,959 samples
+

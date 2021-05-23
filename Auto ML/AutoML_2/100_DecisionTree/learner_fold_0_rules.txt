@@ -1,0 +1,8 @@
+if (price <= 30.5) and (price > 15.5) then response: 87.826 | based on 29,979 samples
+
+if (price > 30.5) and (price <= 53.5) then response: 89.641 | based on 17,763 samples
+
+if (price <= 30.5) and (price <= 15.5) then response: 85.843 | based on 15,640 samples
+
+if (price > 30.5) and (price > 53.5) then response: 91.442 | based on 11,942 samples
+

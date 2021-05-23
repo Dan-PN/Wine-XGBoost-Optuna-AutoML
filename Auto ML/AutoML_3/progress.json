@@ -1,0 +1,117 @@
+{
+    "fit_level": "finished",
+    "time_controller": {
+        "total_time_limit": 7200,
+        "model_time_limit": null,
+        "steps": [
+            "simple_algorithms",
+            "default_algorithms",
+            "ensemble",
+            "stack",
+            "ensemble_stacked"
+        ],
+        "algorithms": [
+            "Xgboost"
+        ],
+        "spend": [
+            {
+                "model_name": "prepare_data",
+                "model_type": "prepare_data",
+                "fit_level": "prepare_data",
+                "train_time": 49.90200233459473
+            },
+            {
+                "model_name": "1_Optuna_Xgboost",
+                "model_type": "Xgboost",
+                "fit_level": "default_algorithms",
+                "train_time": 2018.4051496982574
+            }
+        ],
+        "is_hill_climbing": false,
+        "is_stacking": true
+    },
+    "all_params": {
+        "default_algorithms": [
+            {
+                "additional": {
+                    "max_rounds": 10000,
+                    "early_stopping_rounds": 50,
+                    "max_rows_limit": null,
+                    "max_cols_limit": null
+                },
+                "preprocessing": {
+                    "columns_preprocessing": {},
+                    "target_preprocessing": [
+                        "na_exclude",
+                        "scale_normal"
+                    ],
+                    "ml_task": "regression"
+                },
+                "validation_strategy": {
+                    "validation_type": "kfold",
+                    "k_folds": 10,
+                    "shuffle": true,
+                    "X_path": "AutoML_3\\X.data",
+                    "y_path": "AutoML_3\\y.data",
+                    "results_path": "AutoML_3"
+                },
+                "learner": {
+                    "model_type": "Xgboost",
+                    "ml_task": "regression",
+                    "n_jobs": -1,
+                    "objective": "reg:squarederror",
+                    "eta": 0.05,
+                    "max_depth": 12,
+                    "min_child_weight": 13,
+                    "subsample": 0.7519887123246279,
+                    "colsample_bytree": 0.3124407656964223,
+                    "seed": 1234,
+                    "eval_metric": "rmse",
+                    "lambda": 1.320949656036725,
+                    "alpha": 6.607298489806165,
+                    "max_rounds": 1000,
+                    "early_stopping_rounds": 50,
+                    "explain_level": 2
+                },
+                "automl_random_state": 1234,
+                "ml_task": "regression",
+                "explain_level": 2,
+                "name": "1_Optuna_Xgboost",
+                "status": "trained",
+                "final_loss": 1.8350305021675737,
+                "train_time": 2021.6772482395172,
+                "data_type": "original",
+                "optuna_time_budget": 3600,
+                "optuna_init_params": {
+                    "original_Xgboost": {
+                        "eta": 0.05,
+                        "max_depth": 12,
+                        "lambda": 1.320949656036725,
+                        "alpha": 6.607298489806165,
+                        "colsample_bytree": 0.3124407656964223,
+                        "subsample": 0.7519887123246279,
+                        "min_child_weight": 13,
+                        "objective": "reg:squarederror",
+                        "eval_metric": "rmse",
+                        "max_rounds": 1000,
+                        "early_stopping_rounds": 50,
+                        "seed": 1234
+                    }
+                },
+                "optuna_verbose": true,
+                "max_time_for_learner": 72.0
+            }
+        ],
+        "ensemble": [
+            {
+                "model_type": "ensemble",
+                "is_stacked": false,
+                "name": "Ensemble",
+                "status": "skipped",
+                "final_loss": 1.8350305021675737,
+                "train_time": 2021.6772482395172
+            }
+        ]
+    },
+    "adjust_validation": false
+}

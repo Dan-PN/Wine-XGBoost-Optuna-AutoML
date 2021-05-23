@@ -1,0 +1,16 @@
+{
+    "original_Xgboost": {
+        "eta": 0.05,
+        "max_depth": 12,
+        "lambda": 1.320949656036725,
+        "alpha": 6.607298489806165,
+        "colsample_bytree": 0.3124407656964223,
+        "subsample": 0.7519887123246279,
+        "min_child_weight": 13,
+        "objective": "reg:squarederror",
+        "eval_metric": "rmse",
+        "max_rounds": 1000,
+        "early_stopping_rounds": 50,
+        "seed": 1234
+    }
+}

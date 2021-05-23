@@ -1,0 +1,108 @@
+{
+    "name": "Ensemble",
+    "ml_task": "regression",
+    "optimize_metric": "rmse",
+    "selected_models": [
+        {
+            "model": "105_CatBoost_GoldenFeatures",
+            "repeat": 1.0
+        },
+        {
+            "model": "11_Xgboost",
+            "repeat": 4.0
+        },
+        {
+            "model": "18_Xgboost",
+            "repeat": 8.0
+        },
+        {
+            "model": "21_LightGBM",
+            "repeat": 1.0
+        },
+        {
+            "model": "24_LightGBM",
+            "repeat": 7.0
+        },
+        {
+            "model": "26_LightGBM_GoldenFeatures",
+            "repeat": 10.0
+        },
+        {
+            "model": "36_CatBoost",
+            "repeat": 1.0
+        },
+        {
+            "model": "4_Default_LightGBM",
+            "repeat": 1.0
+        },
+        {
+            "model": "56_NeuralNetwork",
+            "repeat": 7.0
+        },
+        {
+            "model": "57_NeuralNetwork",
+            "repeat": 13.0
+        },
+        {
+            "model": "57_NeuralNetwork_SelectedFeatures",
+            "repeat": 10.0
+        },
+        {
+            "model": "58_NeuralNetwork",
+            "repeat": 1.0
+        },
+        {
+            "model": "5_Default_Xgboost",
+            "repeat": 3.0
+        },
+        {
+            "model": "61_NeuralNetwork",
+            "repeat": 4.0
+        },
+        {
+            "model": "62_NeuralNetwork",
+            "repeat": 4.0
+        },
+        {
+            "model": "6_Default_CatBoost",
+            "repeat": 10.0
+        },
+        {
+            "model": "77_LightGBM_GoldenFeatures",
+            "repeat": 2.0
+        },
+        {
+            "model": "78_LightGBM_GoldenFeatures",
+            "repeat": 7.0
+        },
+        {
+            "model": "79_LightGBM",
+            "repeat": 6.0
+        },
+        {
+            "model": "7_Default_NeuralNetwork",
+            "repeat": 1.0
+        },
+        {
+            "model": "80_LightGBM",
+            "repeat": 2.0
+        },
+        {
+            "model": "86_NeuralNetwork",
+            "repeat": 11.0
+        },
+        {
+            "model": "87_NeuralNetwork",
+            "repeat": 8.0
+        },
+        {
+            "model": "89_NeuralNetwork",
+            "repeat": 5.0
+        }
+    ],
+    "predictions_fname": "Ensemble\\predictions_ensemble.csv",
+    "metric_name": "rmse",
+    "final_loss": 1.8052505097825937,
+    "train_time": 71.66898894309998,
+    "is_stacked": false
+}

@@ -1,0 +1,108 @@
+{
+    "uid": "321cc8c0-9505-488b-89e3-05ca8ace17a1",
+    "name": "71_NearestNeighbors",
+    "preprocessing": [
+        {
+            "scale": [
+                {
+                    "scale": [
+                        41.1553502442624
+                    ],
+                    "mean": [
+                        35.54691731718974
+                    ],
+                    "var": [
+                        1693.7628537279093
+                    ],
+                    "n_samples_seen": 75324,
+                    "n_features_in": 1,
+                    "columns": [
+                        "price"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "ml_task": "regression",
+            "params": {
+                "columns_preprocessing": {
+                    "price": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "regression"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "0.24.2",
+            "algorithm_name": "k-Nearest Neighbors",
+            "algorithm_short_name": "Nearest Neighbors",
+            "uid": "9b349dcc-2868-4ec1-850d-0daedbc467f2",
+            "params": {
+                "model_type": "Nearest Neighbors",
+                "ml_task": "regression",
+                "n_jobs": -1,
+                "seed": 1243,
+                "n_neighbors": 3,
+                "weights": "distance",
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rows_limit": 100000,
+            "max_cols_limit": 100
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "price": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "regression"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.9,
+            "shuffle": true,
+            "X_path": "AutoML_2\\X.data",
+            "y_path": "AutoML_2\\y.data",
+            "results_path": "AutoML_2"
+        },
+        "learner": {
+            "model_type": "Nearest Neighbors",
+            "ml_task": "regression",
+            "n_jobs": -1,
+            "seed": 1243,
+            "n_neighbors": 3,
+            "weights": "distance",
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "regression",
+        "explain_level": 2,
+        "name": "71_NearestNeighbors",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 720.0
+    },
+    "saved": [
+        "71_NearestNeighbors\\learner_fold_0.k_neighbors"
+    ],
+    "predictions_fname": "71_NearestNeighbors\\predictions_validation.csv",
+    "metric_name": "rmse",
+    "final_loss": 3.1894784762159025,
+    "train_time": 24.308164596557617,
+    "is_stacked": false
+}
