@@ -24,4 +24,4 @@
 
 **Objective**: Run AutoMl on same Wine dataset, compare performance ->[Notebook](https://github.com/Dan-PN/Wine-XGBoost-Optuna/blob/main/Auto%20ML/AutoML.ipynb)
 - A) AutoMl as model EDA and Explained -> [Explainer](https://github.com/Dan-PN/Wine-XGBoost-Optuna/tree/main/Auto%20ML/AutoML_1#readme)
-- B) AutoML as a powerful model/hyperparameter tuner ->[Model_tuner](AutoML_2/../README.md) // [Optuna_tuner](AutoML_3/../README.md)
+- B) AutoML as a powerful model/hyperparameter tuner ->[Model_tuner](https://github.com/Dan-PN/Wine-XGBoost-Optuna/tree/main/Auto%20ML/AutoML_2#readme) // [Optuna-AutoML-XGBoost](https://github.com/Dan-PN/Wine-XGBoost-Optuna/tree/main/Auto%20ML/AutoML_3#readme)
