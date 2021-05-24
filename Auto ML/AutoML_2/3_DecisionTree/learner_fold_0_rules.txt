@@ -1,0 +1,32 @@
+if (price <= 30.5) and (price > 15.5) and (price > 20.5) and (w_simple <= 0.5) then response: 88.307 | based on 16,409 samples
+
+if (price <= 30.5) and (price > 15.5) and (price <= 20.5) and (w_rich <= 0.5) then response: 87.127 | based on 11,337 samples
+
+if (price > 30.5) and (price <= 53.5) and (price <= 40.5) and (w_simple <= 0.5) then response: 89.289 | based on 9,981 samples
+
+if (price > 30.5) and (price > 53.5) and (price <= 84.5) and (w_complex <= 0.5) then response: 90.823 | based on 7,124 samples
+
+if (price <= 30.5) and (price <= 15.5) and (price <= 12.5) and (w_rich <= 0.5) then response: 85.187 | based on 7,124 samples
+
+if (price <= 30.5) and (price <= 15.5) and (price > 12.5) and (w_rich <= 0.5) then response: 86.226 | based on 7,047 samples
+
+if (price > 30.5) and (price <= 53.5) and (price > 40.5) and (w_complex <= 0.5) then response: 90.039 | based on 6,856 samples
+
+if (price > 30.5) and (price > 53.5) and (price > 84.5) and (price <= 230.5) then response: 92.168 | based on 3,590 samples
+
+if (price <= 30.5) and (price > 15.5) and (price <= 20.5) and (w_rich > 0.5) then response: 88.396 | based on 1,819 samples
+
+if (price <= 30.5) and (price <= 15.5) and (price > 12.5) and (w_rich > 0.5) then response: 87.613 | based on 886 samples
+
+if (price > 30.5) and (price > 53.5) and (price <= 84.5) and (w_complex > 0.5) then response: 92.121 | based on 859 samples
+
+if (price > 30.5) and (price <= 53.5) and (price > 40.5) and (w_complex > 0.5) then response: 91.33 | based on 785 samples
+
+if (price <= 30.5) and (price <= 15.5) and (price <= 12.5) and (w_rich > 0.5) then response: 86.533 | based on 583 samples
+
+if (price <= 30.5) and (price > 15.5) and (price > 20.5) and (w_simple > 0.5) then response: 85.411 | based on 414 samples
+
+if (price > 30.5) and (price > 53.5) and (price > 84.5) and (price > 230.5) then response: 94.748 | based on 369 samples
+
+if (price > 30.5) and (price <= 53.5) and (price <= 40.5) and (w_simple > 0.5) then response: 85.901 | based on 141 samples
+

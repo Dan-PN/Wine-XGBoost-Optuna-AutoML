@@ -78,4 +78,3 @@ wines = pd.concat([wines, categorycal_encoded], axis=1, join="inner")
 # Save
 wines.to_csv("wines_encoded.csv", encoding='utf-8', index=False)
 
-# fff

@@ -1,0 +1,77 @@
+{
+    "new_features": [
+        {
+            "feature1": "price",
+            "feature2": "w_fresh",
+            "operation": "sum",
+            "score": 0.6477036943
+        },
+        {
+            "feature1": "price",
+            "feature2": "w_black",
+            "operation": "sum",
+            "score": 0.6483549501
+        },
+        {
+            "feature1": "price",
+            "feature2": "w_age",
+            "operation": "sum",
+            "score": 0.6487638553
+        },
+        {
+            "feature1": "price",
+            "feature2": "w_juicy",
+            "operation": "sum",
+            "score": 0.6489632309
+        },
+        {
+            "feature1": "price",
+            "feature2": "w_texture",
+            "operation": "sum",
+            "score": 0.6497168572
+        },
+        {
+            "feature1": "price",
+            "feature2": "w_mineral",
+            "operation": "sum",
+            "score": 0.6500396949
+        },
+        {
+            "feature1": "price",
+            "feature2": "w_drink",
+            "operation": "sum",
+            "score": 0.6506189795
+        },
+        {
+            "feature1": "price",
+            "feature2": "c_Washington",
+            "operation": "sum",
+            "score": 0.6507859804
+        },
+        {
+            "feature1": "price",
+            "feature2": "w_rich",
+            "operation": "sum",
+            "score": 0.6510519629
+        },
+        {
+            "feature1": "price",
+            "feature2": "w_well",
+            "operation": "sum",
+            "score": 0.6512430196
+        }
+    ],
+    "new_columns": [
+        "price_sum_w_fresh",
+        "price_sum_w_black",
+        "price_sum_w_age",
+        "price_sum_w_juicy",
+        "price_sum_w_texture",
+        "price_sum_w_mineral",
+        "price_sum_w_drink",
+        "price_sum_c_Washington",
+        "price_sum_w_rich",
+        "price_sum_w_well"
+    ],
+    "ml_task": "regression"
+}

@@ -1,0 +1,199 @@
+{
+    "uid": "02a575c4-6503-48be-a9fc-336862818b0e",
+    "name": "26_LightGBM_GoldenFeatures",
+    "preprocessing": [
+        {
+            "golden_features": {
+                "new_features": [
+                    {
+                        "feature1": "price",
+                        "feature2": "w_fresh",
+                        "operation": "sum",
+                        "score": 0.6477036943
+                    },
+                    {
+                        "feature1": "price",
+                        "feature2": "w_black",
+                        "operation": "sum",
+                        "score": 0.6483549501
+                    },
+                    {
+                        "feature1": "price",
+                        "feature2": "w_age",
+                        "operation": "sum",
+                        "score": 0.6487638553
+                    },
+                    {
+                        "feature1": "price",
+                        "feature2": "w_juicy",
+                        "operation": "sum",
+                        "score": 0.6489632309
+                    },
+                    {
+                        "feature1": "price",
+                        "feature2": "w_texture",
+                        "operation": "sum",
+                        "score": 0.6497168572
+                    },
+                    {
+                        "feature1": "price",
+                        "feature2": "w_mineral",
+                        "operation": "sum",
+                        "score": 0.6500396949
+                    },
+                    {
+                        "feature1": "price",
+                        "feature2": "w_drink",
+                        "operation": "sum",
+                        "score": 0.6506189795
+                    },
+                    {
+                        "feature1": "price",
+                        "feature2": "c_Washington",
+                        "operation": "sum",
+                        "score": 0.6507859804
+                    },
+                    {
+                        "feature1": "price",
+                        "feature2": "w_rich",
+                        "operation": "sum",
+                        "score": 0.6510519629
+                    },
+                    {
+                        "feature1": "price",
+                        "feature2": "w_well",
+                        "operation": "sum",
+                        "score": 0.6512430196
+                    }
+                ],
+                "new_columns": [
+                    "price_sum_w_fresh",
+                    "price_sum_w_black",
+                    "price_sum_w_age",
+                    "price_sum_w_juicy",
+                    "price_sum_w_texture",
+                    "price_sum_w_mineral",
+                    "price_sum_w_drink",
+                    "price_sum_c_Washington",
+                    "price_sum_w_rich",
+                    "price_sum_w_well"
+                ],
+                "ml_task": "regression"
+            },
+            "scale_y": {
+                "scale": [
+                    3.101684432176403
+                ],
+                "mean": [
+                    88.41560458817906
+                ],
+                "var": [
+                    9.620446316805458
+                ],
+                "n_samples_seen": 75324,
+                "n_features_in": 1,
+                "columns": [
+                    "target"
+                ],
+                "scale_method": "scale_normal"
+            },
+            "ml_task": "regression",
+            "params": {
+                "columns_preprocessing": {},
+                "target_preprocessing": [
+                    "na_exclude",
+                    "scale_normal"
+                ],
+                "ml_task": "regression",
+                "golden_features": {
+                    "results_path": "AutoML_2",
+                    "ml_task": "regression"
+                }
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "3.0.0",
+            "algorithm_name": "LightGBM",
+            "algorithm_short_name": "LightGBM",
+            "uid": "6a2fd94a-24cb-405e-b9a6-08ea0b4cec64",
+            "params": {
+                "model_type": "LightGBM",
+                "ml_task": "regression",
+                "n_jobs": -1,
+                "seed": 1241,
+                "objective": "regression",
+                "num_leaves": 63,
+                "learning_rate": 0.05,
+                "feature_fraction": 0.9,
+                "bagging_fraction": 0.8,
+                "min_data_in_leaf": 30,
+                "metric": "rmse",
+                "custom_eval_metric_name": null,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rounds": 10000,
+            "early_stopping_rounds": 50,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {},
+            "target_preprocessing": [
+                "na_exclude",
+                "scale_normal"
+            ],
+            "ml_task": "regression",
+            "golden_features": {
+                "results_path": "AutoML_2",
+                "ml_task": "regression"
+            }
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.9,
+            "shuffle": true,
+            "X_path": "AutoML_2\\X.data",
+            "y_path": "AutoML_2\\y.data",
+            "results_path": "AutoML_2"
+        },
+        "learner": {
+            "model_type": "LightGBM",
+            "ml_task": "regression",
+            "n_jobs": -1,
+            "seed": 1241,
+            "objective": "regression",
+            "num_leaves": 63,
+            "learning_rate": 0.05,
+            "feature_fraction": 0.9,
+            "bagging_fraction": 0.8,
+            "min_data_in_leaf": 30,
+            "metric": "rmse",
+            "custom_eval_metric_name": null,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "regression",
+        "explain_level": 2,
+        "name": "26_LightGBM_GoldenFeatures",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original_golden_features",
+        "max_time_for_learner": 720.0
+    },
+    "saved": [
+        "26_LightGBM_GoldenFeatures\\learner_fold_0.lightgbm"
+    ],
+    "predictions_fname": "26_LightGBM_GoldenFeatures\\predictions_validation.csv",
+    "metric_name": "rmse",
+    "final_loss": 1.8253385687929446,
+    "train_time": 72.06974005699158,
+    "is_stacked": false
+}
