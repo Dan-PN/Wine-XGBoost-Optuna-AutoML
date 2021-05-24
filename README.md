@@ -1,4 +1,4 @@
-# Wine 🍷 Dataset Exploration and XGBoost Regression Hyperparameter Tuning with Optuna
+# Wine 🍷 Dataset Exploration and XGBoost Regression Hyperparameter Tuning with Optuna & AutoML
 
 ## Classic Take on the [Wine Review Dataset from Kaggle](https://www.kaggle.com/zynicide/wine-reviews)
 
