@@ -2,7 +2,7 @@
 
 ## Classic Take on the [Wine Review Dataset from Kaggle](https://www.kaggle.com/zynicide/wine-reviews)
 
-### Part 1 - EDA Exploration with dataprep ->> Wine101.py // Wine101_EDA.ipynb
+### Part 1 - EDA Exploration with dataprep
 Objective: Understand data distribution ->> Wine101.py // Wine101_EDA.ipynb
 
 ### Part 2 - Data Extraction / Feature Eng / Data Encoding  ->> Wine_Processing.py
