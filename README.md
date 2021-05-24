@@ -23,5 +23,5 @@
 ### Part 4 - AutoMl with [mljar-supervised](https://github.com/mljar/mljar-supervised/)
 
 **Objective**: Run AutoMl on same Wine dataset, compare performance ->[Notebook](AutoML.ipynb)
-- A) AutoMl as model EDA and Explained -> [Explainer](AutoML_1/../README.md)
+- A) AutoMl as model EDA and Explained -> [Explainer](Auto ML/AutoML_1/../README.md)
 - B) AutoML as a powerful model/hyperparameter tuner ->[Model_tuner](AutoML_2/../README.md) // [Optuna_tuner](AutoML_3/../README.md)
